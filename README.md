@@ -10,10 +10,10 @@
 ## sub  
 ### [판독문 추출](https://github.com/ajoumax/Nuclear-Medicine_macro/tree/main/extract%20readings)  
 ### [L3-upper thigh 근육량 측정(반자동화)](https://github.com/ajoumax/Nuclear-Medicine_macro/tree/main/L3-upper%20thigh%20muscle%20measurement)  
-  
-  
-  
     
+     
+      
+       
 ***자신의 컴퓨터의 경로와 모니터좌표를 재지정해주셔야 합니다.***
   
     
