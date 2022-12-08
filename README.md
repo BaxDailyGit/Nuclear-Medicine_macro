@@ -11,7 +11,7 @@
 
 
 ##sub  
-판독문 추출 (환경 infinitt)  
+판독문 추출 (환경 infinitt)  (https://github.com/ajoumax/Nuclear-Medicine_macro/tree/main/extract%20readings)
 L3-upper thigh 근육량 측정(python)(반자동화)  
 
 
