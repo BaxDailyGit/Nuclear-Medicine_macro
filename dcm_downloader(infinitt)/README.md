@@ -26,6 +26,6 @@
   pyautogui.position()  
   
   
-7.준비가 완료되었으면 INFINITT프로그램을 활성화하고 CMD에 아래와 같이 입력합니다.  
+7.준비가 완료되었으면 INFINITT프로그램을 활성화하고 cmd관리자 모드에서 아래와 같이 입력합니다.  
   python BRCL_dicom.py  
   
