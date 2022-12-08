@@ -7,7 +7,7 @@
 [thigh-femur 측정(AutoHotkey,엑셀vba)(반자동화)](https://github.com/ajoumax/Nuclear-Medicine_macro/blob/main/thigh-femur_measurement)  
 
 #sub  
-[판독문 추출 (환경 infinitt)](https://github.com/ajoumax/Nuclear-Medicine_macro/tree/main/extract%20readings)
+[판독문 추출 (환경 infinitt)](https://github.com/ajoumax/Nuclear-Medicine_macro/tree/main/extract%20readings)  
 [L3-upper thigh 근육량 측정(python)(반자동화)](https://github.com/ajoumax/Nuclear-Medicine_macro/tree/main/L3-upper%20thigh%20muscle%20measurement)
 
 
