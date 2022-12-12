@@ -1,0 +1,756 @@
+; 1. ctrl+r :	load IDs in file data 
+; 2. a :		Enter the one index ID
+; 3. q,w,e,r :	select the appropriate year
+; 4. s :		copy the text in information navigator
+; 5. d,f :		set the line
+; 6. g : 		save copied text to a text file
+
+
+data :=""
+
+stopFlag = 0
+reIndicateFlag = 0
+
+
+idIdx = 1
+idArray:= Object()
+idArrayLen = 0
+currentID = 0
+
+;-----------------------------------------------------
+
+idTxtName = muscle_image\id_list.txt
+
+destTxtName =PET_CT\201001_result.txt
+
+;-----------------------------------------------------
+xpos = 0
+ypos = 0
+
+
+
+
+
+
+
+
+
+
+
+
+global idIdx
+
+
+
+
+
+num:=idArray[idIdx]
+
+nextid=nextid
+
+newline=newline
+
+
+; name parsing needed
+parsed_temp_window := StrSplit(Name,["`n" ])
+;(Array_반환값_문자열(객체)의 배열 , String(분리할 문자열),Delimiters) 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+return
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+^r:: ; 1. load IDs in file data
+
+Loop, Read,C:\Users\ajounm\Desktop\AutoHotkey\result_of\%idTxtName%
+{
+	idArray.insert(A_LoopReadLine)
+	idArrayLen++
+}
+
+Msgbox, "Reading proccess complete"
+
+
+return 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+a::
+MouseClick,left,-2000,-2000,1
+MouseClick,left,1030,30,2
+Sleep, 2200
+
+
+MouseClick,right,50,60
+Sleep, 100
+
+Send, {down}
+Send, {down}
+Send, {down}
+Send, {enter}
+
+Sleep, 200
+MouseClick,left,-2000,-2000,1
+
+
+
+
+
+return
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+s:: ; 2. when press some keys, then Search Id
+MouseClick,left,-1500,-1500
+
+currentID := idArray[idIdx]
+
+
+if !currentID 
+{
+	Msgbox, "currentID empty"
+	return
+}
+
+
+Mousemove, 980, 1020
+Sleep, 100
+
+
+; insert
+MouseClick
+Sleep, 100
+Send, {%currentID%
+Sleep, 100
+Send, {enter}
+Sleep, 1000
+
+
+
+Mousemove, 0,40,,r
+
+Sleep, 300
+MouseClick
+Sleep, 500
+Click Down
+Sleep, 200
+Mousemove,-50,-1100,,r
+Sleep, 200
+Click Up
+
+
+return
+
+
+
+
+
+
+
+
+
+
+
+
+Muscle_Range_function(){ ;이미지창 기준
+Send, {+}
+Sleep, 100 
+Send, {+}
+Sleep, 100 
+Mousemove, -60, 250
+Sleep, 100 
+MouseClick
+Sleep, 300 
+Send, -29
+Sleep, 300 
+Send, {tab}
+Sleep, 300 
+Send, 150
+Sleep, 300 
+Send, {enter}
+Sleep, 100 
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+TFA_U_function() { ;roi창 기준
+
+Mousemove, 10, 150
+Sleep, 100 
+MouseClick
+Sleep, 100 
+Mousemove, 600, 500
+Sleep, 100 
+MouseClick
+Sleep, 100 
+
+}
+
+
+z::
+Muscle_Range_function()
+Sleep, 100 
+TFA_U_function() 
+return
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+SFA_U_function() { ;이미지창 기준
+
+Mousemove, -70, 145
+Sleep, 100 
+MouseClick
+Sleep, 100 
+MouseClick,left,545, -85,2
+Sleep, 100
+Send, {tab} ;Mousemove, 100, 90
+Sleep, 100 
+Send, 100
+Sleep, 100 
+Send, {enter}
+Sleep, 100 
+Mousemove, 300, 600
+Sleep, 100 
+MouseClick
+}
+
+
+x::
+SFA_U_function() 
+return
+
+
+
+
+
+
+
+VFA_U_function() { ;이미지창 기준
+
+Mousemove, -40, 145
+Sleep, 100 
+MouseClick
+Sleep, 100 
+MouseClick,left,545, -85,2
+Sleep, 100
+Send, {tab} ;Mousemove, 100, 90
+Sleep, 100 
+Send, 100
+Sleep, 100 
+Send, {enter}
+Sleep, 100 
+Mousemove, 300, 600
+Sleep, 100 
+MouseClick
+}
+
+
+c::
+VFA_U_function() 
+return
+
+
+
+
+
+
+
+
+
+
+
+
+d:: ;이미지창 기준 세팅하고 ctrl+m , id와 슬라이스 기록
+
+
+
+
+Mousemove, 380, -105
+Sleep, 100 
+MouseClick
+Sleep, 100 
+
+
+Send, {down}
+Send, {down}
+Send, {down}
+Send, {down}
+Send, {down}
+Send, {down}
+Send, {down}
+Send, {enter}
+Sleep, 200
+
+Send, {space}
+Send, {tab}
+Send, {space}
+Send, {tab}
+Send, {tab}
+Send, {tab}
+Send, {space}
+Send, {tab}
+Send, {tab}
+Send, {tab}
+
+Send, {tab}
+Send, {tab}
+Send, {tab}
+Send, {tab}
+Send, {tab}
+Send, {tab}
+Send, {tab}
+Send, {tab}
+Send, {tab}
+Send, {tab}
+Send, {tab}
+Send, {tab}
+
+Send, {space}
+
+Send, {tab}
+Send, {tab}
+Send, {tab}
+Send, {tab}
+Send, {tab}
+Send, {tab}
+
+Send, {enter}
+
+
+
+
+MouseClick,left,0,160,1
+
+
+
+
+
+
+Send, ^{m}
+Sleep, 100
+Send, ^{a}
+Sleep, 100
+Send, ^{c}
+Sleep, 100
+Mousemove, 10, 215
+Sleep, 100 
+MouseClick
+Sleep, 100 
+Send, ^{v}
+Sleep, 100 
+Send, ^{enter}
+Sleep, 100 
+
+
+
+
+MouseClick,left,-1500,-1500,1
+
+Mousemove, 500, 500 ;;;
+Sleep, 100 
+MouseClick
+
+return
+
+
+
+
+
+
+
+
+f:: ;이미지창 기준 measure click
+
+Mousemove, 380, -105
+Sleep, 100 
+MouseClick
+Sleep, 100 
+
+
+Send, {down}
+Send, {down}
+Send, {down}
+Send, {down}
+Send, {down}
+Send, {down}
+Send, {down}
+Send, {enter}
+Sleep, 200
+
+Send, {space}
+Send, {tab}
+Send, {space}
+Send, {tab}
+Send, {tab}
+Send, {tab}
+Send, {space}
+Send, {tab}
+Send, {tab}
+Send, {tab}
+
+Send, {tab}
+Send, {tab}
+Send, {tab}
+Send, {tab}
+Send, {tab}
+Send, {tab}
+Send, {tab}
+Send, {tab}
+Send, {tab}
+Send, {tab}
+Send, {tab}
+Send, {tab}
+
+Send, {space}
+
+Send, {tab}
+Send, {tab}
+Send, {tab}
+Send, {tab}
+Send, {tab}
+Send, {tab}
+
+Send, {enter}
+
+
+
+
+MouseClick,left,0,160,1
+
+
+
+
+
+
+Mousemove, -70, 375
+Sleep, 100 
+MouseClick
+Sleep, 100 
+Send, {tab}
+Send, {tab}
+Sleep, 100 
+Send, {enter}
+Sleep, 100 
+Send, {left}											
+Sleep, 100 
+Send, {enter}
+Sleep, 20000
+
+return
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+k:: ;value result창 기준  이미지창 close click
+MouseClick,left,-5, -5,1
+Sleep, 100 
+Send, !{F4}
+
+return
+
+
+
+
+
+
+l:: ;Value Results 창에서 selecte all -> copy -> 좌측하단 메모장에 paste -> 저장
+
+Send, ^{a}
+Sleep, 100 
+Send, ^{c}
+Sleep, 100 
+MouseClick,left,-100, 550,1
+Sleep, 100 
+Send, ^{v}
+Sleep, 100 
+MouseClick,left,700, -520,1
+Sleep, 300 
+Send, {tab}
+Send, {enter}
+Sleep, 100 
+
+MouseClick,left,350,-500,1
+
+Sleep, 100 
+Send, !{F4}
+Sleep, 300 
+Send, {tab}
+Send, {enter}
+Sleep, 200 
+
+
+
+Send, {o}
+Sleep, 200 
+Send, {a}
+
+
+return
+
+
+
+
+
+
+
+
+
+
+q:: ;이미지창 기준 wand click
+MouseGetPos, wx, wy
+Mousemove, 100, 100
+MouseClick
+Mousemove, wx, wy
+MouseClick
+return
+
+
+
+
+
+
+w:: ;이미지창 기준 brush
+MouseGetPos, bx, by
+Mousemove,  195, -85
+MouseClick
+Mousemove, bx, by
+return
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+o:: ;asanj 닫기
+MouseClick,left,-2000,-2000,1
+
+MouseClick,left,950,20,1
+return
+
+
+
+
+
+
+
+p:: ;nextid
+idIdx ++
+MouseClick,right,-2000,-2000,1
+return
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+^ESC::
+	ExitApp
+
+GuiClose:
+	ExitApp
