@@ -57,14 +57,11 @@
 > ```
 
 ### [thigh-femur 측정(반자동화)](https://github.com/ajoumax/Nuclear-Medicine_macro/tree/main/thigh-femur%20measurement)  
-
+> 자세한 설명은 추후에 작성한다.
 
 ## sub study  
->
-> 
 ### [판독문 추출](https://github.com/ajoumax/Nuclear-Medicine_macro/tree/main/extract%20readings)  
->
-> 
+> 자세한 설명은 추후에 작성한다.
 ### [L3-upper thigh 근육량 측정(반자동화)](https://github.com/ajoumax/Nuclear-Medicine_macro/tree/main/L3-upper%20thigh%20muscle%20measurement)  
 > ASANj 프로그램 위해서 실행된다.
 > 
@@ -73,10 +70,58 @@
 > 이후 자세한 설명은 추후에 작성한다.
 
 
-<hr/>  
----
+<hr>  
 
 ###### 자신의 컴퓨터 환경에 맞게 세팅해주셔야 합니다.  
 
-###### 세부설명을 추가해 놓겠습니다.  
+## 레포지토리 구조
+```
+📦 
+├─ Image_Quality_Evaluation
+│  ├─ Image_Quality_Evaluation.md
+│  ├─ README.md
+│  ├─ Untitled.ipynb
+│  ├─ comparator.py
+│  ├─ data
+│  ├─ path - base
+│  └─ vba_script.txt
+├─ L3-upper thigh muscle measurement
+│  ├─ Autohotkey code.txt
+│  ├─ L3-upper thigh muscle  measurement
+│  ├─ README.md
+│  └─ id_list.txt
+├─ README.md
+├─ arrange_exported_patient_info
+│  ├─ FTTR 정리 완료
+│  │  ├─ pathology분류_기계별정리본(~0901).xlsm
+│  │  ├─ 기계별정리본_통계자료.xlsm
+│  │  └─ 총정리본 for_study_data.xlsm
+│  ├─ README.md
+│  ├─ arrange_exported_patient_info
+│  └─ 정리본 양식
+│     ├─ 날짜 정리본 for_study_data.xlsm
+│     └─ 날짜 정리본.xlsm
+├─ dcm_downloader(infinitt)
+│  ├─ BRCL_PNG_DATE_LIST.txt
+│  ├─ BRCL_PNG_ID_LIST.txt
+│  ├─ BRCL_dicom.py
+│  ├─ README.md
+│  ├─ Untitled.ipynb
+│  ├─ WB_bottom.PNG
+│  ├─ WB_top.PNG
+│  ├─ Wholebody_bottom.PNG
+│  ├─ Wholebody_top.PNG
+│  └─ dcm_downloader(infinitt)
+├─ extract readings
+│  ├─ DELIMITER.xlsm
+│  ├─ HOMD.py
+│  ├─ HOMD_date_list.txt
+│  ├─ HOMD_id_list.txt
+│  ├─ HOMD_result.txt
+│  ├─ README.md
+│  ├─ image.PNG
+│  └─ text.md
+└─ thigh-femur measurement
+   └─ thigh-femur measurement
+```
 
